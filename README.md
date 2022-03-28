@@ -1,11 +1,11 @@
 # Game-of-Life
-Here I explore several implementations of Conway's Game Of Life and compare their efficiency. 
+Here I explore several implementations of Conway's Game Of Life and compare their efficiency.
 
 I draw on ideas from graph theory and convolution theory. The functions are flexible enough to
-be imported and used for other applications. 
+be imported and used for other applications.
 
-run the game_of_life.py for a quick animation.
+game_of_life.py:  if run as main produces an animation.
 
-Comiple and run game_of_life.cpp for an animation directly in you command line. 
+game_of_life.cpp: run and compile for an animation directly in your command line.
 
-Then check out the jupyter notebook to make more sense of things.
+Check out the jupyter notebook to make more sense of things.
