@@ -9,6 +9,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from scipy.sparse import dia_matrix
+import argparse
 #from PIL import Image
 #from matplotlib import animation, rc
 #from IPython.display import HTML
@@ -150,8 +151,15 @@ def animate(arr,steps):
         ims.append([im])
     return animation.ArtistAnimation(fig, ims, interval=50, blit=True, repeat_delay=1000)
     
-   
+def arguments_parser():
+	parser = argparse.ArgumentParser(description="This preduces an animation of the game of life the flag -i choses and initial setup from the initial set up dictionary. -d sets the dimentions of the playing field and -s sets the number of iterations")
+	parser.add_argument('-i', type=str,default='pento',help="initial condition")
+	parser.add_argument('-d', type=int,default=128,help="resolution")
+	parser.add_argument('-s', type=int,default=1000,help="number of steps")
+	return parser.parse_args()   
 if __name__ == '__main__' :  
+
+
 
 #### some choices of initial conditions #####
     grower = np.array(
@@ -185,18 +193,18 @@ if __name__ == '__main__' :
               [0,0,0,0,0,1,0,0,0,0,0],
               [0,0,0,0,0,0,0,0,0,0,0]]
             )
-
-    init = grower
-    #init = periodic	# uncomment to run
-    #init = floater
+   
+    init_dict = {'pento':grower,'peri15':periodic,'floater':floater}
+    args = arguments_parser()
 
     # you can run the game with diffrent rules. This is the setting for connway Game of life
     
     nn      = np.array([0,1,2,3,4,5,6,7,8]) 
     actions = np.array([0,0,2,1,0,0,0,0,0])
     
-    steps =500        #number of steps
-    d =128  	#dimentions of field
+    steps =args.s        #number of steps
+    d =args.d  	#dimentions of field
+    init = init_dict[args.i]
     X = emb_mat(init,d) # emmbed initial matrix into larger field
     
     ## this mask is for the convolution maethod
