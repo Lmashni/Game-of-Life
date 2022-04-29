@@ -27,7 +27,6 @@ To complie the cpp script run this in the directory:
 
 ```console
 g++ Game_of_Life.cpp -o gol
-./gol
 ```
 
 run with:
