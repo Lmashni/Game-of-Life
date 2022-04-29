@@ -193,8 +193,16 @@ if __name__ == '__main__' :
               [0,0,0,0,0,1,0,0,0,0,0],
               [0,0,0,0,0,0,0,0,0,0,0]]
             )
+            
+    acorn= np.array(
+              [0,0,0,0,0,0,0,0,0,0,
+	       0,0,0,0,0,0,0,0,0,0,
+	       0,0,1,0,0,0,0,0,0,0,
+	       0,0,0,0,1,0,0,0,0,0,
+	       0,1,1,0,0,1,1,1,0,0,
+	       0,0,0,0,0,0,0,0,0,0])
    
-    init_dict = {'pento':grower,'peri15':periodic,'floater':floater}
+    init_dict = {'pento':grower,'peri15':periodic,'floater':floater,'acorn':acorn.reshape((6,10))}
     args = arguments_parser()
 
     # you can run the game with diffrent rules. This is the setting for connway Game of life
