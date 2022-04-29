@@ -1,23 +1,23 @@
+
+
 # Game-of-Life
 Here I explore several implementations of Conway's Game Of Life and compare their efficiency.
 
 I draw on ideas from graph theory and convolution theory. The functions are flexible enough to
 be imported and used for other applications.
 
-The reposotory contains two implimentation one in python and an other in cpp, as well as a jupyter notebook explaing some of the concepts.
+The repository contains two implementations, one in python and another in cpp, as well as a jupyter notebook explaining some of the concepts.
 
-## python:
+### python:
 
-The python script produces an animation by runing the following command in the local directory:
+The python script produces an animation by running the following command in the local directory:
 
 
 ```console
-python python game_of_life.py -i 'pento' -d 128 -s 10000
+python game_of_life.py -i pento -d 128 -s 10000
 
 ```
+The flag -i sets up the initial condition from a dictionary. You can for now choose from [pento , peri15 , floater]. -d sets the dimensions of the field and -s the number of steps to run for. The setting chosen are also the default ones.
 
-game_of_life.py:  if run as main produces an animation.
 
-game_of_life.cpp: run and compile for an animation directly in your command line.
 
-Check out the jupyter notebook to make more sense of things.
