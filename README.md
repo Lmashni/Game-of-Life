@@ -18,8 +18,11 @@ python game_of_life.py -i pento -d 128 -s 10000
 
 ```
 -i sets up the initial condition from a dictionary. You can for now choose from ('pento' , 'peri15' , 'floater' or 'acorn'). 
+
 -d sets the dimensions of the field.
+
 -s the number of steps to run for. 
+
 The settings chosen are also the default ones.
 
 ### c++
