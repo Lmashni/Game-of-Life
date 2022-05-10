@@ -42,5 +42,20 @@ run with:
 
 ```
 
+### junpyter notebook
+In the jupyter notebook I go explore three methods for counting nearest neighbors and compare their efficiency. 
+The three methods being:
+
+<ol>
+  <li>Array rolling</li>
+  <li>Adjacency matrix from graph theory </li>
+  <li>convolution theory</li>
+</ol> 
+
+If you have jupyter installed run this in your directory to open notebook
+
+```console
+jupyter notebook Game_of_life.ipynb 
+```
 
 
