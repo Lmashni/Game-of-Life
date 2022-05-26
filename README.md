@@ -17,7 +17,7 @@ The python script produces an animation by running the following command in the 
 python game_of_life.py -i pento -d 128 -s 10000
 
 ```
--i sets up the initial condition from a dictionary. You can for now choose from ('pento' , 'peri15' , 'floater' or 'acorn'). 
+-i sets up the initial condition from a dictionary. You can for now chose from ('pento' , 'peri15' , 'floater' or 'acorn'). 
 
 -d sets the dimensions of the field.
 
@@ -43,7 +43,7 @@ run with:
 ```
 
 ### junpyter notebook
-In the jupyter notebook I go explore three methods for counting nearest neighbors and compare their efficiency. 
+In the jupyter notebook I explore three methods for counting nearest neighbors and compare their efficiency. 
 The three methods being:
 
 <ol>
