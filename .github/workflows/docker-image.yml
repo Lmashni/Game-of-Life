@@ -2,9 +2,9 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "Lmashni-patch-1-docker-action" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "Lmashni-patch-1-docker-action" ]
 
 jobs:
 
