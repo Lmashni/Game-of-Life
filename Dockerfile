@@ -9,4 +9,4 @@ RUN pip3 install -r requirements.txt
 
 COPY . .
 
-CMD [ "python3", "game_of_life.py" ]
+CMD [ "python3", "game_of_life.py","-s 200" ]
