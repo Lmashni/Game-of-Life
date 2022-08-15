@@ -155,7 +155,7 @@ def arguments_parser():
 	parser = argparse.ArgumentParser(description="This preduces an animation of the game of life the flag -i choses and initial setup from the initial set up dictionary. -d sets the dimentions of the playing field and -s sets the number of iterations")
 	parser.add_argument('-i', type=str,default='pento',help="initial condition")
 	parser.add_argument('-d', type=int,default=128,help="resolution")
-	parser.add_argument('-s', type=int,default=1000,help="number of steps")
+	parser.add_argument('-s', type=int,default=9999,help="number of steps")
 	return parser.parse_args()   
 if __name__ == '__main__' :  
 
@@ -223,7 +223,7 @@ if __name__ == '__main__' :
     ## this sets up the adjacency matrix
     adj = adj_mat(d)
 
-    arr = game_of_life(X,10000,nn,actions,0,NN_adj,adj)
+    arr = game_of_life(X,steps,nn,actions,0,NN_adj,adj)
 
     anim = animate(arr,steps)
 
