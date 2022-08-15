@@ -223,7 +223,7 @@ if __name__ == '__main__' :
     ## this sets up the adjacency matrix
     adj = adj_mat(d)
 
-    arr = game_of_life(X,10000,nn,actions,0,NN_adj,adj)
+    arr = game_of_life(X,steps,nn,actions,0,NN_adj,adj)
 
     anim = animate(arr,steps)
 
